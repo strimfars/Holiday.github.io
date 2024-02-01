@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.line img {
+    width: 200vh;
+    height: auto;
+}
+
+.header-logo img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    position: relative;
+}
+
+.header-line {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 19px;
+    margin: 0 10px;
+    transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+    color: dimgray;
+}
+
+.header-logo img {
+    width: 75%;
+    height: auto;
+}
+
+.header-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.h1 {
+    width: 190vh;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+.h2 {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.h1:hover {
+    transform: scale(1.05);
+}
+
+.slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    margin-top: 2%; /* Змінилось значення margin-top */
+}
+.image-container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-container:hover .h2 {
+    transform: scale(1.05);
+}
+
+.text1 {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(83, 80, 80, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.image-container:hover .text1 {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(116, 111, 111, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.slideshow-container:hover .text {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background: color #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.Poshuk {
+    margin-top: 10px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #187bcd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-input {
+    margin-right: 5px;
+}
+
+.search-input label {
+    display: inline-block;
+    margin-right: 2px;
+    color: white;
+}
+
+.search-btn {
+    background-color: #29b229;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+
+.search-result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #646464;
+    border-radius: 5px;
+    display: none;
+    background-color: #187bcd;
+}
+
+.search-result p {
+    margin: 0;
+    color: #d8d8d8;
+}
+
+.full-width {
+    width: 100%;
+    height:500px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.info-title {
+    font-weight: bold;
+}
+
+.info-line {
+    border: 1px solid #000;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.centered-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-image img {
+    margin-top: 40px;
+    width: 750px;
+    height: 462px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.centered-image img:hover {
+    transform: scale(1.2);
+}
+
+.registration-container,
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.registration-container {
+    background-color: #1c0988; /* Темно синій колір */
+    color: white;
+}
+
+.registration-container h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input,
+select {
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #0074cc; /* Синій колір кнопки */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.profile-container {
+    display: none;
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-section img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-container .user-details {
+    text-align: left;
+    max-width: 400px;
+}
+
+.user-details p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #0074cc; /* Синій колір тексту */
+}
+
+.error-message {
+    color: red;
+}
+
+

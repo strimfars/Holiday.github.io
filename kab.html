@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-logo"><img src="img\Logo.png" alt="Логотип"></div>
+            <div class="header-line">
+                <a class="nav-item" href="index.html">Головна</a>
+                <a class="nav-item" href="bron.html">Забронювати</a>
+                <a class="nav-item" href="kontact.html">Контакти</a>
+                <a class="nav-item" href="kab.html">Особистий кабінет</a>
+            </div>
+        </div>
+        <div class="line"><img src="img\Rectangle 1.png" alt="Синя лінія"></div>
+    </div>
+
+    <div class="registration-container">
+        <h1>Реєстрація</h1>
+        <form id="registrationForm" onsubmit="submitForm(); return false;">
+            <label for="gmail">Введіть gmail:</label>
+            <input type="email" id="gmail" placeholder="example@gmail.com" required>
+            
+            <label for="fullName">Введіть ПІБ:</label>
+            <input type="text" id="fullName" placeholder="ПІБ" required>
+            
+            <label for="gender">Вкажіть стать:</label>
+            <select id="gender" required>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+            </select>
+            
+            <label for="dob">Введіть дату народження:</label>
+            <input type="date" id="dob" required>
+
+            <label for="phoneNumber">Номер телефону:</label>
+            <input type="tel" id="phoneNumber" placeholder="123-456-7890" required>
+
+            <button type="submit">Зареєструватись</button>
+        </form>
+    </div>
+
+    <div class="profile-container" id="profileContainer">
+        <div class="avatar-section">
+            <img src="default-avatar.jpg" alt="Аватар" id="avatarImage">
+            <button onclick="changeAvatar()">Змінити аватар</button>
+        </div>
+
+        <div class="user-details">
+            <h2>Ваші дані:</h2>
+            <p id="profileGmail"></p>
+            <p id="profileFullName"></p>
+            <p id="profileGender"></p>
+            <p id="profileDob"></p>
+            <p id="profilePhoneNumber"></p>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
